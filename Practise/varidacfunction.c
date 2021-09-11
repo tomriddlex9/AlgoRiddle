@@ -178,7 +178,7 @@ int main ()
     
     while (number_of_test_cases--) {
         if (test_implementations_by_sending_three_elements()) {
-            printf("Correct Answer\n");
+        printf("Correct Answer\n");
         } else {
             printf("Wrong Answer\n");
         }
