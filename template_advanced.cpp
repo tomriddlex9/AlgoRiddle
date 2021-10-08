@@ -49,7 +49,10 @@ int a[N];
 
 void solution() {
     int i, j, k, n, m;
-
+    si(n);
+    int array[n];
+    fo(i,n)array[i]=rand()%100;
+    fo(i,n)cout<<array[i]<<"  ";
 }
 
 /* ========== YOUR CODE HERE ========= */
@@ -58,11 +61,12 @@ int main() {
     ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
     srand(chrono::high_resolution_clock::now().time_since_epoch().count());
 
-    int t = 1;
-    si(t);
-    while(t--) {
-        solution();
-    }
+    // int t = 1;
+    // si(t);
+    // while(t--) {
+    //     solution();
+    // }
+    solution(); 
 
     return 0;
 }
