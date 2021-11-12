@@ -12,7 +12,7 @@ void solution()
 }
 int main(int argc, char const *argv[])
 {
-    int tc{}; 
+    int tc{};
     cin>>tc; 
     while(tc--) {solution();} 
     return 0;

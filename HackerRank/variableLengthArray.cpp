@@ -1,22 +1,31 @@
-#include<iostream> 
-#include<vector> 
-using namespace std; 
-int main()
+#include <bits/stdc++.h> 
+using namespace std;
+int valFinder(vector<int> array,int pos)
 {
+    return array[pos];
+}
+int main() {
     int n,q; 
-    int sizes[n]; 
-    int k; 
-    vector<vector<int>> variableArray;
-    cin>>n>>q; 
-    for(int i=0;i<n;i++)
+    cin>>n>>q;
+    vector<int> arrays[n];
+    for(int i=0;i<n;i++)  
     {
-        cin>>k; 
-        for(int j=0;j<k;j++)
+        int vecsize;
+        cin>>vecsize; 
+        for(int j=0;j<vecsize;j++)
         {
-            int temp;
+            int temp; 
             cin>>temp; 
-            variableArray[i][j].pushback(temp);
-        }
-    } 
-          
+            arrays[i].push_back(temp);
+        }    
+    }
+    for(int i{0};i<q;i++)
+    {
+        int vec,pos; 
+        cin>>vec>>pos;
+        cout<<valFinder(arrays[vec],pos)<<"\n" ;
+    }
+    
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    return 0;
 }
