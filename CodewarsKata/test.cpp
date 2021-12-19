@@ -5,8 +5,7 @@ using namespace std;
 int main()
 {
    //main code goes here
-   cout<<"Hello world";
-   int array[3];
-   for(int i{0};i<4;i++) array[i]=i; 
+   double num=3;
+   cout<<double(num/2);
    return 0;
 }

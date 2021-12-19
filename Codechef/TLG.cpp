@@ -1,30 +1,30 @@
-#include <iostream>  
- using namespace std; 
-void solve()
-{
-    int n,maxLead{0};
-    bool aWin{false};
-    cin>>n; 
-    int a[n],b[n];
-    for(int i{0};i<n;i++)
-    {
-        cin>>a[i]>>b[i];
-        if(a[i]>b[i]&& a[i]-b[i]>maxLead)
-        {
-            maxLead=a[i]-b[i];
-            aWin=true; 
-        }
-        else if(b[i]>a[i] && b[i]-a[i]>maxLead)
-        {
-            maxLead=b[i]-a[i];
-            aWin=false; 
-        }
-    }
-    aWin?cout<<"1 "<<maxLead<<"\n" : cout<<"2 "<<maxLead<<"\n";  
-}
+#include<iostream>
+#include<sstream>
+#include<cstdlib>
+using namespace std;
 int main()
 {
-ios::sync_with_stdio(false);//for faster IO with cin and cout 
-cin.tie(nullptr);
-solve(); 
+   int n,lead{0},highlead{0};
+   int winner{0},sump1{0},sump2{0};  
+   cin>>n;
+   while(n--){
+       int p1,p2; 
+       cin>>p1>>p2;
+       sump1+=p1; 
+       sump2+=p2;  
+       lead=sump1-sump2; 
+       if(abs(lead)>highlead && lead >0)
+       {
+           highlead=abs(lead);
+           winner=0; 
+       } 
+       else if(abs(lead)>highlead && lead<0)
+       {
+           highlead=abs(lead);
+           winner=1; 
+       }
+   }
+   cout<<winner+1<<" "<<highlead; 
+
+   return 0;
 }

@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std; 
-void fizzBuzz(int n)
+void fizzBuzz()
 {
      int count3{0},count5{0};
      for(int i=1;i<100;i++)
@@ -16,10 +16,8 @@ void fizzBuzz(int n)
          }
      }
 }
-int main(int argc, char const *argv[])
+int main()
 {
-    int n;
-   cin>>n; 
-   fizzBuzz(n);
+   fizzBuzz();
     return 0;
 }
