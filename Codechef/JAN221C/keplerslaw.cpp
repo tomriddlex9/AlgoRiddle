@@ -1,21 +1,15 @@
 #include<bits/stdc++.h>
 using namespace std;
-void reverseString(string &s,int x)
-{
-    for(int i=1;i<=x;i++){
-        s[i]=s[x-i];
-    }
-}
 void solve()
 {
-   int n,k;
-   string s;
-   cin>> n >> k ;  
-   cin>>s; 
-   for(int i=k;i>0;i++){
-       reverseString(s,i);
-   }
-}
+    int ta,tb,ra,rb;
+    cin>>ta>>tb>>ra>>rb; 
+    double ka = pow(ta,2) / pow(ra,3);
+    double kb = pow(tb,2) / pow(rb,3);
+    if(abs(ka-kb)<1e-9) cout<<"Yes" ; 
+    else cout<<"No";
+
+} 
 int main()
 {
 ios::sync_with_stdio(false);//for faster IO with cin and cout 
